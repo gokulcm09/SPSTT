@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html
+    class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+    lang="zxx">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link" />
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link" />
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+
+<head>
+    <style>
+        .dismissButton {
+            background-color: #fff;
+            border: 1px solid #dadce0;
+            color: #1a73e8;
+            border-radius: 4px;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            height: 36px;
+            cursor: pointer;
+            padding: 0 24px;
+        }
+
+        .dismissButton:hover {
+            background-color: rgba(66, 133, 244, 0.04);
+            border: 1px solid #d2e3fc;
+        }
+
+        .dismissButton:focus {
+            background-color: rgba(66, 133, 244, 0.12);
+            border: 1px solid #d2e3fc;
+            outline: 0;
+        }
+
+        .dismissButton:hover:focus {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd;
+        }
+
+        .dismissButton:active {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+                0 1px 3px 1px rgba(60, 64, 67, 0.15);
+        }
+
+        .dismissButton:disabled {
+            background-color: #fff;
+            border: 1px solid #f1f3f4;
+            color: #3c4043;
+        }
+    </style>
+    <style>
+        .gm-style .gm-style-mtc label,
+        .gm-style .gm-style-mtc div {
+            font-weight: 400;
+        }
+
+        .gm-style .gm-style-mtc ul,
+        .gm-style .gm-style-mtc li {
+            box-sizing: border-box;
+        }
+    </style>
+    <style>
+        .gm-control-active>img {
+            box-sizing: content-box;
+            display: none;
+            left: 50%;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .gm-control-active>img:nth-child(1) {
+            display: block;
+        }
+
+        .gm-control-active:hover>img:nth-child(1),
+        .gm-control-active:active>img:nth-child(1) {
+            display: none;
+        }
+
+        .gm-control-active:hover>img:nth-child(2),
+        .gm-control-active:active>img:nth-child(3) {
+            display: block;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700" />
+    <style>
+        .gm-ui-hover-effect {
+            opacity: 0.6;
+        }
+
+        .gm-ui-hover-effect:hover {
+            opacity: 1;
+        }
+    </style>
+    <style>
+        .gm-style .gm-style-cc span,
+        .gm-style .gm-style-cc a,
+        .gm-style .gm-style-mtc div {
+            font-size: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <style>
+        @media print {
+
+            .gm-style .gmnoprint,
+            .gmnoprint {
+                display: none;
+            }
+        }
+
+        @media screen {
+
+            .gm-style .gmnoscreen,
+            .gmnoscreen {
+                display: none;
+            }
+        }
+    </style>
+    <style>
+        .gm-style-pbc {
+            transition: opacity ease-in-out;
+            background-color: rgba(0, 0, 0, 0.45);
+            text-align: center;
+        }
+
+        .gm-style-pbt {
+            font-size: 22px;
+            color: white;
+            font-family: Roboto, Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    </style>
+    <style>
+        .gm-style img {
+            max-width: none;
+        }
+
+        .gm-style {
+            font: 400 11px Roboto, Arial, sans-serif;
+            text-decoration: none;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Stomv - Religious temple HTML Template</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" />
+
+    <!-- CSS
+        ============================================ -->
+
+    <!-- Bootstrap CSS -->
+
+    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css" />
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/common.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/util.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/map.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/marker.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/stats.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/onion.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/controls.js"></script>
+</head>
+
+<body>
+    <!--====================  header area ====================-->
+    <div class="header-area header-area--default">
+        <!-- Header Bottom Wrap Start -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-flex align-items-center">
+                        <div class="header__logo">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img class="Nav-Img" alt="" src="assets/images/img/NavLogo.png" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <div class="header__navigation menu-style-three d-none d-lg-block">
+                                <nav class="navigation-menu">
+                                    <ul>
+                                        <li class="has-children has-children--multilevel-submenu active">
+                                            <a href="#">
+                                                <span>Home
+                                                </span>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li class="active">
+                                                    <a href="index.html">
+                                                        <span>Home One
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="index-2.html">
+                                                        <span>Home Two
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="index-3.html">
+                                                        <span>Home Three
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="index-4.html">
+                                                        <span>Home Four
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="events-details.html">
+                                                <span>About
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="events.html">
+                                                <span>Event
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="has-children has-children--multilevel-submenu">
+                                            <a href="service.html">
+                                                <span>Services
+                                                </span>
+                                            </a>
+                                            <!-- 
+												<ul class="submenu">                                                
+													<li>
+														<a href="it-services.html">
+															<span>IT Services
+																</span>
+																</a>
+																</li>                                            
+																</ul> -->
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="causes.html">
+                                                <span>Causes
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="has-children has-children--multilevel-submenu">
+                                            <a href="#">
+                                                <span>Pages
+                                                </span>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="donation.html">
+                                                        <span>Donation
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="gallery.html">
+                                                        <span>Gallery
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="mission-and-vision.html">
+                                                        <span>Mission &amp; Vision
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="causes-details.html">
+                                                        <span>Causes Details
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="events-details.html">
+                                                        <span>Events Details
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="contact-us.html">
+                                                <span>Contact
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header-btn text-right d-none d-sm-block ml-lg-4">
+                                <a class="btn-circle btn-default btn" href="#">Donate
+                                </a>
+                            </div>
+                            <!-- mobile menu -->
+                            <div class="mobile-navigation-icon d-block d-lg-none" id="mobile-menu-trigger">
+                                <i>
+                            </div>
+                        </div>
+                    </div>
+        </header>
+        <!-- Header Bottom Wrap End -->
+    </div>
+    <!--====================  End of header area  ====================-->
+
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area--bg-two bg-overlay-black-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="breadcrumb-title text-white">About us</h3>
+                    <!-- breadcrumb-list start -->
+                    <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">About us</li>
+                    </ul>
+                    <!-- breadcrumb-list end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb-area end -->
+
+    <div class="site-wrapper-reveal">
+        <!-- ======== Donation Area Start ========== -->
+        <div class="donation-area section-space--pb_120 section-space--pt_90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Single Donation Wrap Start -->
+                        <div class="single-donation-wrap row align-items-center">
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="donation-image">
+                                    <img src="assets/images/img/4.jpg" class="img-fluid" alt="Donation Image" />
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="donation-content ml-xl-5">
+                                    <div class="donation-title mb-30">
+                                        <h4 class="mb-15">Sree Padmanabhaswamy Temple Trust</h4>
+                                        <!-- <div class="event-date">
+                                            <span>3 Feb 2020 </span>
+                                            <span>@09.00am to 01.00pm</span>
+                                        </div> -->
+                                    </div>
+
+                                    <p>
+                                        The Padmanabhaswamy temple is a hindu temple located in thiruvananthapuram, the
+                                        state capital of Kerala India. The name of the city of Thiruvananthapuram in
+                                        Malayalam translates to "The City of Lord Ananta", referring to the deity of
+                                        the Padmanabhaswamy temple. The temple is built in an intricate fusion of the
+                                        Chera Style and the Dravidian Style of architecture, featuring high walls, and a
+                                        16th-century Gopura. While the Ananthapura Temple in Kumbla is considered the
+                                        original seat of the deity ("Moolasthanam"), architecturally to some extent, the
+                                        temple is a replica of the Adikesava Perumal Temple in Thiruvattar.
+                                        The principal deity Padmanabhaswamy (Vishnu) is enshrined in the "Anantha
+                                        Shayana" posture, the eternal Yogic Sleep on the Serpent Adi Shesha
+                                        Padmanabhaswamy is the tutelary deity of the Royal Family of Travancore.
+                                        There are 5 mandapams under the temple trust which are used to conduct marriages
+                                        and other functions. The trust also manages the Sree Uthradom Tirunal Marthanda
+                                        Varma Chithralayam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// Single Donation Wrap End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======== Donation Area End ========== -->
+
+        <!--=========== Causes Details Area Start ==========-->
+        <div class="causes-details-area section-space--pb_120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="mission-wrap mr-lg-5">
+                            <div class="section-title-wrap text-left">
+                                <h4 class="section-title-normal mb-30">Office Time</h4>
+                            </div>
+
+                            <div class="target-content">
+                                <ul class="mt-30 mision-list">
+                                    <li>&gt; Monday:- 10:00 AM - 05:00 PM</li>
+                                    <li>&gt; Tuesday:- 10:00 AM - 05:00 PM</li>
+                                    <li>&gt; Wednesday:- 10:00 AM - 05:00 PM</li>
+                                    <li>&gt; Thursday:- 10:00 AM - 05:00 PM</li>
+                                    <li>&gt; Friday:- 10:00 AM - 05:00 PM</li>
+                                    <li>&gt; Saturday:- 10:00 AM - 05:00 PM</li>
+                                    <li>&gt; Sunday:- Closed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="target-wrap ml-lg-5 small-mt__40">
+                            <div class="section-title-wrap text-left">
+                                <h4 class="section-title-normal mb-30">Office</h4>
+                            </div>
+
+                            <div class="target-content">
+                                <ul class="venue-list">
+                                    <li>
+                                        <span>Address</span>
+                                        Sree Padmanabha Swamy Temple <br>
+                                        Fort, Thiruvananthapuram - 695023, <br>
+                                        Kerala, India <br> <br>
+
+                                        Ph : 0471 2479245 <br>
+                                        Email :  <a href="mailto:spstrusttvm@gmail.com">spstrusttvm@gmail.com</a> 
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="mission-wrap mr-lg-5">
+                            <div class="section-title-wrap text-left">
+                                <h4 class="section-title-normal mb-30">Location</h4>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.1706526481044!2d76.9446657147606!3d8.482782093900942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bba09b9a511f%3A0x880279ee56baabba!2sPadmanabhaswamy%20Temple%20Rd%2C%20East%20Fort%2C%20Pavithra%20Nagar%2C%20East%20Fort%2C%20Pazhavangadi%2C%20Thiruvananthapuram%2C%20Kerala%20695023!5e0!3m2!1sen!2sin!4v1612262608178!5m2!1sen!2sin"
+                                    width="350" height="210" frameborder="0" style="border:0;" allowfullscreen=""
+                                    aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--========== Footer Area Start ==========-->
+    <footer class="footer-area bg-footer">
+        <div class="footer-top section-space--ptb_80 section-pb text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Address</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li>
+                                        <span>Temple 1: </span> 777/ed Ipum Road Venu Demon Ipsum.
+                                        28400
+                                    </li>
+                                    <li>
+                                        <span>Temple 2: </span> 577/ed Ipum Road Venu Demon Ipsum.
+                                        15400
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Related Links</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about-us.html">About</a></li>
+                                    <li><a href="events.html">Event</a></li>
+                                    <li><a href="service.html">Service</a></li>
+                                    <li><a href="causes.html">Causes</a></li>
+                                    <li><a href="contact-us.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Information</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li>Sun Rise: 6:00 am</li>
+                                    <li>Sun Sat: 5:50 pm</li>
+                                    <li>Start Time: 9:00 am</li>
+                                    <li>End Time: 11.00 pm</li>
+                                    <li>Lunch: 01:30 pm</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Related Links</h6>
+                            </div>
+                            <div class="footer-logo mb-15">
+                                <a href="index.html"><img src="assets/images/logo/footer-logo.png" alt="" /></a>
+                            </div>
+                            <div class="footer-contents">
+                                <p>Subscribe to our Newsletter &amp; stay update.</p>
+                                <div class="newsletter-box">
+                                    <input type="text" placeholder="Enter your mail address" />
+                                    <button><i class="flaticon-paper-plane"></i></button>
+                                </div>
+
+                                <ul class="footer-social-share mt-20">
+                                    <li>
+                                        <a href="#"><i class="flaticon-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="flaticon-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="flaticon-pinterest-social-logo"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="flaticon-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copy-right-box">
+                            <p class="text-white">
+                                Copyright © 2020 Hastech
+                                <a href="https://hasthemes.com/" target="_blank">All Right Reserved</a>.
+                            </p>
+                            <p class="text-white"><a href="#">Privacy policy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--==========// Footer Area End ==========-->
+
+    <!--====================  scroll top ====================-->
+    <a href="#" class="scroll-top" id="scroll-top">
+        <i class="arrow-top flaticon-up-arrow"></i>
+        <i class="arrow-bottom flaticon-up-arrow"></i>
+    </a>
+    <!--====================  End of scroll top  ====================-->
+
+    <!--====================  mobile menu overlay ====================-->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-overlay__inner">
+            <div class="mobile-menu-overlay__header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-8">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/images/logo/logo.png" class="img-fluid" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content text-right">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-overlay__body">
+                <nav class="offcanvas-navigation">
+                    <ul>
+                        <li class="has-children">
+                            <span class="menu-expand"><i></i></span>
+                            <a href="index.html">Home</a>
+                            <ul class="sub-menu" style="display: none">
+                                <li>
+                                    <a href="index.html"><span>Home 1</span></a>
+                                </li>
+                                <li>
+                                    <a href="index-2.html"><span>Home 2</span></a>
+                                </li>
+                                <li>
+                                    <a href="index-3.html"><span>Home 3</span></a>
+                                </li>
+                                <li>
+                                    <a href="index-4.html"><span>Home 4</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="about-us.html">about</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="events.html">Evnets</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="service.html">Services</a>
+                        </li>
+
+                        <li class="has-children">
+                            <a href="causes.html">Causes</a>
+                        </li>
+
+                        <li class="has-children">
+                            <span class="menu-expand"><i></i></span>
+                            <a href="javascript:void(0)">Pages</a>
+                            <ul class="sub-menu" style="display: none">
+                                <li>
+                                    <a href="gallery.html"><span>Gallery</span></a>
+                                </li>
+                                <li>
+                                    <a href="mission-and-vision.html"><span>Mission &amp; Vision</span></a>
+                                </li>
+                                <li>
+                                    <a href="causes-details.html"><span>Causes Details</span></a>
+                                </li>
+                                <li>
+                                    <a href="events-details.html"><span>Events Details</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-children">
+                            <a href="contact-us.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of mobile menu overlay  ====================-->
+
+    <!-- JS
+    ============================================ -->
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;callback=initMap"></script>
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+
+    <script src="assets/js/plugins/plugins.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!--Google Map Active-->
+    <script>
+        /*--
+          Google Map
+          -----------------------------------*/
+
+        // Google Map For Single Property Map
+        $(".googleMap-1,.googleMap-2").each(function () {
+            if ($(this).length) {
+                var $this = $(this);
+                var $lat = $this.data("lat");
+                var $long = $this.data("long");
+
+                function initialize() {
+                    var mapOptions = {
+                        zoom: 14,
+                        scrollwheel: false,
+                        center: new google.maps.LatLng($lat, $long),
+                        styles: [
+                            {
+                                featureType: "water",
+                                elementType: "geometry.fill",
+                                stylers: [
+                                    {
+                                        color: "#F1F1F1",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "transit",
+                                stylers: [
+                                    {
+                                        color: "#F1F1F1",
+                                    },
+                                    {
+                                        visibility: "off",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "road.highway",
+                                elementType: "geometry.stroke",
+                                stylers: [
+                                    {
+                                        visibility: "on",
+                                    },
+                                    {
+                                        color: "#fff",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "road.highway",
+                                elementType: "geometry.fill",
+                                stylers: [
+                                    {
+                                        color: "#fff",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "road.local",
+                                elementType: "geometry.fill",
+                                stylers: [
+                                    {
+                                        visibility: "on",
+                                    },
+                                    {
+                                        color: "#F1F1F1",
+                                    },
+                                    {
+                                        weight: 1.8,
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "road.local",
+                                elementType: "geometry.stroke",
+                                stylers: [
+                                    {
+                                        color: "#ECECEC",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "poi",
+                                elementType: "geometry.fill",
+                                stylers: [
+                                    {
+                                        visibility: "on",
+                                    },
+                                    {
+                                        color: "#FF5151",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "administrative",
+                                elementType: "geometry",
+                                stylers: [
+                                    {
+                                        color: "#fff",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "road.arterial",
+                                elementType: "geometry.fill",
+                                stylers: [
+                                    {
+                                        color: "#F1F1F1",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "road.arterial",
+                                elementType: "geometry.fill",
+                                stylers: [
+                                    {
+                                        color: "#ffffff",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "landscape",
+                                elementType: "geometry.fill",
+                                stylers: [
+                                    {
+                                        visibility: "on",
+                                    },
+                                    {
+                                        color: "#F9F9F9",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "road",
+                                elementType: "labels.text.fill",
+                                stylers: [
+                                    {
+                                        color: "#B7B7B7",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "administrative",
+                                elementType: "labels.text.fill",
+                                stylers: [
+                                    {
+                                        visibility: "on",
+                                    },
+                                    {
+                                        color: "#8b8b8b",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "poi",
+                                elementType: "labels.icon",
+                                stylers: [
+                                    {
+                                        visibility: "off",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "poi",
+                                elementType: "labels",
+                                stylers: [
+                                    {
+                                        visibility: "off",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "road.arterial",
+                                elementType: "geometry.stroke",
+                                stylers: [
+                                    {
+                                        color: "#d6d6d6",
+                                    },
+                                ],
+                            },
+                            {
+                                featureType: "road",
+                                elementType: "labels.icon",
+                                stylers: [
+                                    {
+                                        visibility: "off",
+                                    },
+                                ],
+                            },
+                            {},
+                            {
+                                featureType: "poi",
+                                elementType: "geometry.fill",
+                                stylers: [
+                                    {
+                                        color: "#EBEBEB",
+                                    },
+                                ],
+                            },
+                        ],
+                    };
+                    var map = new google.maps.Map(
+                        document.getElementById("googleMap-1"),
+                        mapOptions
+                    );
+                    var marker = new google.maps.Marker({
+                        position: map.getCenter(),
+                        icon: "assets/images/icons/map-marker.png",
+                        map: map,
+                        overlay: {
+                            values: [
+                                {
+                                    address: "40.7590615,-73.969231",
+                                    position: "center",
+                                    options: {
+                                        content:
+                                            '<div class="gmap-info-wrapper icon"><div class="gmap-marker-icon"><img src="https://aeroland.thememove.com/main/wp-content/themes/aeroland/assets/images/maps/map-marker.png" /></div><div class="gmap-info-template-wrap"><div class="gmap-info-template"><div class="gmap-info-content"><div class="info-image"><img src="https://aeroland.thememove.com/main/wp-content/uploads/sites/2/2019/01/map-image.png" alt="map-image" /></div><div class="info-main"><h5 class="gmap-marker-title">Aeroland Studio</h5><div class="gmap-marker-content"><div>601 Lexinton Avenue, NY</div><div>+44 20 7794 0190</div><a href="mailto:info@example.com">info@example.com</a></div></div></div></div></div></div>',
+                                    },
+                                },
+                            ],
+                            events: {
+                                mouseover: function (overlay, event, context) {
+                                    var target = overlay.getDOMElement();
+
+                                    target.style.zIndex = 2;
+
+                                    var info = $(target).find(".gmap-info-wrapper");
+                                    info.find(".gmap-info-template").show();
+                                },
+                                mouseout: function (overlay) {
+                                    var target = overlay.getDOMElement();
+
+                                    target.style.zIndex = 1;
+
+                                    var info = $(target).find(".gmap-info-wrapper");
+                                    info.find(".gmap-info-template").hide();
+                                },
+                            },
+                        },
+                    });
+                }
+
+                google.maps.event.addDomListener(window, "load", initialize);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html class=" js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="zxx"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><head><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style><style>.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}.gm-style .gm-style-mtc ul,.gm-style .gm-style-mtc li{box-sizing:border-box}
+</style><style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700"><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+</style><style>.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}
+</style><style>@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stomv - Religious temple HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+
+    <!-- CSS
+        ============================================ -->
+
+    <!-- Bootstrap CSS -->
+
+
+    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d40.67161363841455&amp;2d-74.0104732923174&amp;2m2&amp;1d40.79259042049005&amp;2d-73.85827669551274&amp;2u14&amp;4sen-GB&amp;5e0&amp;6sm%40540000000&amp;7b0&amp;8e0&amp;12e2&amp;callback=_xdc_._o1is1c&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=52635"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i14!2i4826!3i6157!1m4!1m3!1i14!2i4827!3i6157!1m4!1m3!1i14!2i4826!3i6158!1m4!1m3!1i14!2i4826!3i6159!1m4!1m3!1i14!2i4827!3i6158!1m4!1m3!1i14!2i4827!3i6159!1m4!1m3!1i14!2i4828!3i6157!1m4!1m3!1i14!2i4828!3i6158!1m4!1m3!1i14!2i4828!3i6159!1m4!1m3!1i14!2i4826!3i6160!1m4!1m3!1i14!2i4827!3i6160!1m4!1m3!1i14!2i4828!3i6160!2m3!1e0!2sm!3i540264326!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjZ8cy5lOmcuZnxwLmM6I2ZmRjFGMUYxLHMudDo0fHAuYzojZmZGMUYxRjF8cC52Om9mZixzLnQ6NDl8cy5lOmcuc3xwLnY6b258cC5jOiNmZmYscy50OjQ5fHMuZTpnLmZ8cC5jOiNmZmYscy50OjUxfHMuZTpnLmZ8cC52Om9ufHAuYzojZmZGMUYxRjF8cC53OjEuOCxzLnQ6NTF8cy5lOmcuc3xwLmM6I2ZmRUNFQ0VDLHMudDoyfHMuZTpnLmZ8cC52Om9ufHAuYzojZmZGRjUxNTEscy50OjF8cy5lOmd8cC5jOiNmZmYscy50OjUwfHMuZTpnLmZ8cC5jOiNmZkYxRjFGMSxzLnQ6NTB8cy5lOmcuZnxwLmM6I2ZmZmZmZmZmLHMudDo1fHMuZTpnLmZ8cC52Om9ufHAuYzojZmZGOUY5Rjkscy50OjN8cy5lOmwudC5mfHAuYzojZmZCN0I3Qjcscy50OjF8cy5lOmwudC5mfHAudjpvbnxwLmM6I2ZmOGI4YjhiLHMudDoyfHMuZTpsLml8cC52Om9mZixzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDo1MHxzLmU6Zy5zfHAuYzojZmZkNmQ2ZDYscy50OjN8cy5lOmwuaXxwLnY6b2ZmLHMudDoyfHMuZTpnLmZ8cC5jOiNmZkVCRUJFQg!4e3!12m1!5b1&amp;callback=_xdc_._h6usy3&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=84061"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Fdemo.hasthemes.com%2Fstomv-preview%2Fstomv%2Fcontact-us.html&amp;4sAIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;callback=_xdc_._wzopiv&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=2824"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/QuotaService.RecordEvent?1shttps%3A%2F%2Fdemo.hasthemes.com%2Fstomv-preview%2Fstomv%2Fcontact-us.html&amp;3sAIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;7s9nkolf&amp;10e1&amp;callback=_xdc_._hchhk6&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=123686"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i14!2i4826!3i6157!1m4!1m3!1i14!2i4827!3i6157!1m4!1m3!1i14!2i4826!3i6158!1m4!1m3!1i14!2i4826!3i6159!1m4!1m3!1i14!2i4827!3i6158!1m4!1m3!1i14!2i4827!3i6159!1m4!1m3!1i14!2i4828!3i6157!1m4!1m3!1i14!2i4828!3i6158!1m4!1m3!1i14!2i4828!3i6159!1m4!1m3!1i14!2i4826!3i6160!1m4!1m3!1i14!2i4827!3i6160!1m4!1m3!1i14!2i4828!3i6160!2m3!1e0!2sm!3i540264326!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e3!12m1!5b1&amp;callback=_xdc_._23e4t8&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=110972"></script></head>
+
+<body>
+
+
+
+
+
+    <!--====================  header area ====================-->
+    <div class="header-area header-area--default">
+
+
+        <!-- Header Bottom Wrap Start -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-flex align-items-center">
+                        <div class="header__logo">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/images/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <div class="header__navigation menu-style-three d-none d-lg-block">
+                                <nav class="navigation-menu">
+                                    <ul>
+                                        <li class="has-children has-children--multilevel-submenu">
+                                            <a href="#"><span>Home</span></a>
+                                            <ul class="submenu">
+                                                <li class=""><a href="index.html"><span>Home One</span></a></li>
+                                                <li><a href="index-2.html"><span>Home Two</span></a></li>
+                                                <li><a href="index-3.html"><span>Home Three</span></a></li>
+                                                <li><a href="index-4.html"><span>Home Four</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="about-us.html"><span>About</span></a>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="events.html"><span>Event</span></a>
+                                        </li>
+                                        <li class="has-children has-children--multilevel-submenu">
+                                            <a href="service.html"><span>Services</span></a>
+                                            <!-- <ul class="submenu">
+                                                <li><a href="it-services.html"><span>IT Services</span></a></li>
+                                            </ul> -->
+                                        </li>
+
+                                        <li class="has-children"><a href="causes.html"><span>Causes</span></a></li>
+                                        <li class="has-children has-children--multilevel-submenu">
+                                            <a href="#"><span>Pages</span></a>
+                                            <ul class="submenu">
+                                                <li><a href="donation.html"><span>Donation</span></a></li>
+                                                <li><a href="gallery.html"><span>Gallery</span></a></li>
+                                                <li><a href="mission-and-vision.html"><span>Mission &amp; Vision</span></a></li>
+                                                <li><a href="causes-details.html"><span>Causes Details</span></a></li>
+                                                <li><a href="events-details.html"><span>Events Details</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children active">
+                                            <a href="contact-us.html"><span>Contact</span></a>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+
+                            </div>
+
+                            <div class="header-btn text-right d-none d-sm-block ml-lg-4">
+                                <a class="btn-circle btn-default btn" href="#">Donate</a>
+                            </div>
+
+                            <!-- mobile menu -->
+                            <div class="mobile-navigation-icon d-block d-lg-none" id="mobile-menu-trigger">
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Bottom Wrap End -->
+
+    </div>
+    <!--====================  End of header area  ====================-->
+
+
+
+
+
+
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area--bg-two bg-overlay-black-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="breadcrumb-title text-white">Contact</h3>
+                    <!-- breadcrumb-list start -->
+                    <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Contact</li>
+                    </ul>
+                    <!-- breadcrumb-list end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb-area end -->
+
+
+
+
+
+
+
+
+    <div class="site-wrapper-reveal">
+
+        <div class="contact-page-wrapper section-space--pt_120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="single-contact-info">
+                            <div class="contact-icon">
+                                <i class="flaticon-placeholder"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h4>Address</h4>
+                                <p>Demo address 72/3 Dome <br>
+                                city. USA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-contact-info">
+                            <div class="contact-icon">
+                                <i class="flaticon-call"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h4>Phone</h4>
+                                <p><a href="tel:01234567">+12 333 658 66 </a><br>
+                                    <a href="tel:01234567">+12 366 666 66</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-contact-info">
+                            <div class="contact-icon">
+                                <i class="flaticon-paper-plane-1"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h4>Mail</h4>
+                                <p><a href="#">demo@mail.com</a>
+                                    <br> <a href="#"> mail.democo.info</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="contact-form-area section-space--ptb_120">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div id="googleMap-1" class="embed-responsive-item googleMap-1" data-lat="40.730610" data-long="-73.935242" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" aria-label="Map" aria-roledescription="map" role="group" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -32, 0);"><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -512px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="width: 24px; height: 24px; overflow: hidden; position: absolute; left: -12px; top: -24px; z-index: 0;"><img alt="" src="assets/images/icons/map-marker.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 24px; height: 24px; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -32, 0);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -512px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -512px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 986; transform: matrix(1, 0, 0, 1, -32, 0);"><div style="position: absolute; left: -256px; top: -512px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4826!3i6157!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=70968" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -512px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4827!3i6157!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=88300" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -512px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4828!3i6157!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=105632" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4827!3i6159!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=112480" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4826!3i6159!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=95148" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4826!3i6158!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=83058" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4827!3i6158!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=100390" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4828!3i6158!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=117722" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4828!3i6159!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=129812" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4828!3i6160!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=84323" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4827!3i6160!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=66991" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4826!3i6160!4i256!2m3!1e0!2sm!3i540264326!2m3!1e2!6m1!3e5!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!5m1!5f2&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=49659" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"><div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div title="" style="width: 40px; height: 40px; overflow: hidden; position: absolute; cursor: pointer; left: -20px; top: -32px; z-index: 0;"><img alt="" src="https://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="width: 40px; height: 40px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div></div><iframe aria-hidden="true" frameborder="0" tabindex="-1" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;" __idm_frm__="420"></iframe><div style="pointer-events: none; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 1000002; opacity: 0; border: 2px solid rgb(26, 115, 232);"></div><div></div><div></div><div></div><div></div><div><button draggable="false" title="Toggle fullscreen view" aria-label="Toggle fullscreen view" type="button" class="gm-control-active gm-fullscreen-control" style="background: none rgb(255, 255, 255); border: 0px; margin: 10px; padding: 0px; text-transform: none; appearance: none; position: absolute; cursor: pointer; user-select: none; border-radius: 2px; height: 40px; width: 40px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; overflow: hidden; top: 0px; right: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C0v2v4h2V2h4V0H2H0z%20M16%2C0h-4v2h4v4h2V2V0H16z%20M16%2C16h-4v2h4h2v-2v-4h-2V16z%20M2%2C12H0v4v2h2h4v-2H2V12z%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C0v2v4h2V2h4V0H2H0z%20M16%2C0h-4v2h4v4h2V2V0H16z%20M16%2C16h-4v2h4h2v-2v-4h-2V16z%20M2%2C12H0v4v2h2h4v-2H2V12z%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C0v2v4h2V2h4V0H2H0z%20M16%2C0h-4v2h4v4h2V2V0H16z%20M16%2C16h-4v2h4h2v-2v-4h-2V16z%20M2%2C12H0v4v2h2h4v-2H2V12z%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" style="height: 18px; width: 18px;"></button></div><div></div><div></div><div></div><div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="0" controlheight="0" style="margin: 10px; user-select: none; position: absolute; display: none; bottom: 26px; left: 0px;"><div class="gmnoprint" controlwidth="40" controlheight="40" style="display: none; position: absolute;"><div style="width: 40px; height: 40px;"><button draggable="false" title="Rotate map 90 degrees" aria-label="Rotate map 90 degrees" type="button" class="gm-control-active" style="background: none rgb(255, 255, 255); display: none; border: 0px; margin: 0px 0px 32px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; width: 40px; height: 40px; top: 0px; left: 0px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"></button><button draggable="false" title="Tilt map" aria-label="Tilt map" type="button" class="gm-tilt gm-control-active" style="background: none rgb(255, 255, 255); display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; width: 40px; height: 40px; top: 0px; left: 0px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="width: 18px;"></button></div></div></div></div><div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="40" controlheight="81" style="margin: 10px; user-select: none; position: absolute; bottom: 95px; right: 40px;"><div class="gmnoprint" controlwidth="40" controlheight="81" style="position: absolute; left: 0px; top: 0px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 40px; height: 81px;"><button draggable="false" title="Zoom in" aria-label="Zoom in" type="button" class="gm-control-active" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23333%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23111%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" style="height: 18px; width: 18px;"></button><div style="position: relative; overflow: hidden; width: 30px; height: 1px; margin: 0px 5px; background-color: rgb(230, 230, 230); top: 0px;"></div><button draggable="false" title="Zoom out" aria-label="Zoom out" type="button" class="gm-control-active" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" style="height: 18px; width: 18px;"></button></div></div></div></div><div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" rel="noopener" href="https://maps.google.com/maps?ll=40.73061,-73.935242&amp;z=14&amp;t=m&amp;hl=en-GB&amp;gl=US&amp;mapclient=apiv3" title="Open this area in Google Maps (opens a new window)" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/google_white5_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div></div><div></div><div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 71px; bottom: 0px; width: 121px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map data ©2021 Google</span></div></div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-GB_US/help/terms_maps.html" target="_blank" rel="noopener" style="text-decoration: none; cursor: pointer; color: rgb(0, 0, 0);">Terms of Use</a></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(0, 0, 0); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2021 Google</div></div></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 300px; height: 180px; position: absolute; left: 135px; top: 210px;"><div style="padding: 0px 0px 10px; font-size: 16px; box-sizing: border-box;">Map Data</div><div style="font-size: 13px;">Map data ©2021 Google</div><button draggable="false" title="Close" aria-label="Close" type="button" class="gm-ui-hover-effect" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: absolute; cursor: pointer; user-select: none; top: 0px; right: 0px; width: 37px; height: 37px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M19%206.41L17.59%205%2012%2010.59%206.41%205%205%206.41%2010.59%2012%205%2017.59%206.41%2019%2012%2013.41%2017.59%2019%2019%2017.59%2013.41%2012z%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="pointer-events: none; display: block; width: 13px; height: 13px; margin: 12px;"></button></div></div></div><div style="background-color: white; font-weight: 500; font-family: Roboto, sans-serif; padding: 15px 25px; box-sizing: border-box; top: 5px; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 5px; left: 50%; max-width: 375px; position: absolute; transform: translateX(-50%); width: calc(100% - 10px); z-index: 1;"><div><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/google_gray.svg" draggable="false" style="padding: 0px; margin: 0px; border: 0px; height: 17px; vertical-align: middle; width: 52px; user-select: none;"></div><div style="line-height: 20px; margin: 15px 0px;"><span style="color: rgba(0, 0, 0, 0.87); font-size: 14px;">This page can't load Google Maps correctly.</span></div><table style="width: 100%;"><tr><td style="line-height: 16px; vertical-align: middle;"><a href="https://developers.google.com/maps/documentation/javascript/error-messages?utm_source=maps_js&amp;utm_medium=degraded&amp;utm_campaign=billing#api-key-and-billing-errors" target="_blank" rel="noopener" style="color: rgba(0, 0, 0, 0.54); font-size: 12px;">Do you own this website?</a></td><td style="text-align: right;"><button class="dismissButton">OK</button></td></tr></table></div></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-form-wrap ml-lg-5">
+                                <h3 class="title mb-40">Contact Form</h3>
+                                <form id="contact-form" action="https://hasthemes.com/file/mail.php" method="post">
+                                    <div class="contact-form__one">
+                                        <div class="contact-input">
+                                            <label>Name</label>
+                                            <div class="contact-inner">
+                                                <input name="con_name" type="text" placeholder="Enter you name">
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-input">
+                                            <label>Phone</label>
+                                            <div class="contact-inner">
+                                                <input name="con_phone" type="text" placeholder="Your Phone Number">
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-input">
+                                            <label>Email</label>
+                                            <div class="contact-inner">
+                                                <input name="con_email" type="email" placeholder="Your Email Address ">
+                                            </div>
+                                        </div>
+                                        <div class="submit-input">
+                                            <button class="submit-btn" type="submit">Submit</button>
+                                            <p class="form-messege"></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!--========== Footer Area Start ==========-->
+    <footer class="footer-area bg-footer">
+        <div class="footer-top section-space--ptb_80 section-pb text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Address</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li><span>Temple 1: </span> 777/ed Ipum Road Venu
+                                        Demon Ipsum. 28400</li>
+                                    <li><span>Temple 2: </span> 577/ed Ipum Road Venu
+                                        Demon Ipsum. 15400</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Related Links</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about-us.html">About</a></li>
+                                    <li><a href="events.html">Event</a></li>
+                                    <li><a href="service.html">Service</a></li>
+                                    <li><a href="causes.html">Causes</a></li>
+                                    <li><a href="contact-us.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Information</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li>Sun Rise: 6:00 am</li>
+                                    <li>Sun Sat: 5:50 pm</li>
+                                    <li>Start Time: 9:00 am</li>
+                                    <li>End Time: 11.00 pm</li>
+                                    <li>Lunch: 01:30 pm</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Related Links</h6>
+                            </div>
+                            <div class="footer-logo mb-15">
+                                <a href="index.html"><img src="assets/images/logo/footer-logo.png" alt=""></a>
+                            </div>
+                            <div class="footer-contents">
+                                <p> Subscribe to our Newsletter &amp; stay update. </p>
+                                <div class="newsletter-box">
+                                    <input type="text" placeholder="Enter your mail address">
+                                    <button><i class="flaticon-paper-plane"></i></button>
+                                </div>
+
+                                <ul class="footer-social-share mt-20">
+                                    <li><a href="#"><i class="flaticon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-pinterest-social-logo"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-youtube"></i></a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copy-right-box">
+                            <p class="text-white">Copyright © 2020 Hastech <a href="https://hasthemes.com/" target="_blank">All Right Reserved</a>.</p>
+                            <p class=" text-white"><a href="#">Privacy policy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--==========// Footer Area End ==========-->
+
+
+
+
+
+    <!--====================  scroll top ====================-->
+    <a href="#" class="scroll-top" id="scroll-top">
+        <i class="arrow-top flaticon-up-arrow"></i>
+        <i class="arrow-bottom flaticon-up-arrow"></i>
+    </a>
+    <!--====================  End of scroll top  ====================-->
+
+    <!--====================  mobile menu overlay ====================-->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-overlay__inner">
+            <div class="mobile-menu-overlay__header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-8">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/images/logo/logo.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content text-right">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-overlay__body">
+                <nav class="offcanvas-navigation">
+                    <ul>
+                        <li class="has-children"><span class="menu-expand"><i></i></span>
+                            <a href="index.html">Home</a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li><a href="index.html"><span>Home 1</span></a></li>
+                                <li><a href="index-2.html"><span>Home 2</span></a></li>
+                                <li><a href="index-3.html"><span>Home 3</span></a></li>
+                                <li><a href="index-4.html"><span>Home 4</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="about-us.html">about</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="events.html">Evnets</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="service.html">Services</a>
+                        </li>
+
+                        <li class="has-children">
+                            <a href="causes.html">Causes</a>
+                        </li>
+
+                        <li class="has-children"><span class="menu-expand"><i></i></span>
+                            <a href="javascript:void(0)">Pages</a>
+                            <ul class="sub-menu" style="display: none;">
+                                <li><a href="gallery.html"><span>Gallery</span></a></li>
+                                <li><a href="mission-and-vision.html"><span>Mission &amp; Vision</span></a></li>
+                                <li><a href="causes-details.html"><span>Causes Details</span></a></li>
+                                <li><a href="events-details.html"><span>Events Details</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-children">
+                            <a href="contact-us.html">Contact</a>
+                        </li>
+
+
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of mobile menu overlay  ====================-->
+
+
+
+
+
+    <!-- JS
+    ============================================ -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;callback=initMap"></script>
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+
+
+    <script src="assets/js/plugins/plugins.min.js"></script>
+
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!--Google Map Active-->
+    <script>
+        /*--
+        Google Map
+        -----------------------------------*/
+
+        // Google Map For Single Property Map
+        $('.googleMap-1,.googleMap-2').each(function() {
+            if ($(this).length) {
+                var $this = $(this);
+                var $lat = $this.data('lat');
+                var $long = $this.data('long');
+
+                function initialize() {
+                    var mapOptions = {
+                        zoom: 14,
+                        scrollwheel: false,
+                        center: new google.maps.LatLng($lat, $long),
+                        styles: [{
+                                "featureType": "water",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                    "color": "#F1F1F1"
+                                }]
+                            },
+                            {
+                                "featureType": "transit",
+                                "stylers": [{
+                                        "color": "#F1F1F1"
+                                    },
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.highway",
+                                "elementType": "geometry.stroke",
+                                "stylers": [{
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#fff"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.highway",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                    "color": "#fff"
+                                }]
+                            },
+                            {
+                                "featureType": "road.local",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#F1F1F1"
+                                    },
+                                    {
+                                        "weight": 1.8
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.local",
+                                "elementType": "geometry.stroke",
+                                "stylers": [{
+                                    "color": "#ECECEC"
+                                }]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#FF5151"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                    "color": "#fff"
+                                }]
+                            },
+                            {
+                                "featureType": "road.arterial",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                    "color": "#F1F1F1"
+                                }]
+                            },
+                            {
+                                "featureType": "road.arterial",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                    "color": "#ffffff"
+                                }]
+                            },
+                            {
+                                "featureType": "landscape",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#F9F9F9"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "labels.text.fill",
+                                "stylers": [{
+                                    "color": "#B7B7B7"
+                                }]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "labels.text.fill",
+                                "stylers": [{
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#8b8b8b"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "labels.icon",
+                                "stylers": [{
+                                    "visibility": "off"
+                                }]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "labels",
+                                "stylers": [{
+                                    "visibility": "off"
+                                }]
+                            },
+                            {
+                                "featureType": "road.arterial",
+                                "elementType": "geometry.stroke",
+                                "stylers": [{
+                                    "color": "#d6d6d6"
+                                }]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "labels.icon",
+                                "stylers": [{
+                                    "visibility": "off"
+                                }]
+                            },
+                            {},
+                            {
+                                "featureType": "poi",
+                                "elementType": "geometry.fill",
+                                "stylers": [{
+                                    "color": "#EBEBEB"
+                                }]
+                            }
+                        ]
+                    };
+                    var map = new google.maps.Map(document.getElementById('googleMap-1'), mapOptions);
+                    var marker = new google.maps.Marker({
+                        position: map.getCenter(),
+                        icon: 'assets/images/icons/map-marker.png',
+                        map: map,
+                        overlay: {
+                            values: [{
+                                address: "40.7590615,-73.969231",
+                                position: 'center',
+                                options: {
+                                    content: '<div class="gmap-info-wrapper icon"><div class="gmap-marker-icon"><img src="https://aeroland.thememove.com/main/wp-content/themes/aeroland/assets/images/maps/map-marker.png" /></div><div class="gmap-info-template-wrap"><div class="gmap-info-template"><div class="gmap-info-content"><div class="info-image"><img src="https://aeroland.thememove.com/main/wp-content/uploads/sites/2/2019/01/map-image.png" alt="map-image" /></div><div class="info-main"><h5 class="gmap-marker-title">Aeroland Studio</h5><div class="gmap-marker-content"><div>601 Lexinton Avenue, NY</div><div>+44 20 7794 0190</div><a href="mailto:info@example.com">info@example.com</a></div></div></div></div></div></div>',
+                                }
+                            }, ],
+                            events: {
+                                mouseover: function(overlay, event, context) {
+                                    var target = overlay.getDOMElement();
+
+                                    target.style.zIndex = 2;
+
+                                    var info = $(target).find('.gmap-info-wrapper');
+                                    info.find('.gmap-info-template').show();
+                                },
+                                mouseout: function(overlay) {
+                                    var target = overlay.getDOMElement();
+
+                                    target.style.zIndex = 1;
+
+                                    var info = $(target).find('.gmap-info-wrapper');
+                                    info.find('.gmap-info-template').hide();
+                                }
+                            }
+                        },
+
+
+                    });
+                };
+
+                google.maps.event.addDomListener(window, 'load', initialize);
+            }
+        });
+    </script>
+
+
+
+</body></html>
