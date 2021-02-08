@@ -1,9 +1,9 @@
 # SPSTT
 
-#To commit changesit
+# To commit changesit
 git add .
 git commit -m "<Commit message>
 git push -u origin main
 
-#To work on project
+# To work on project
 git pull origin main
