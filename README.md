@@ -18,4 +18,4 @@ git pull origin main
 6 Home page buttons shd be edit,
 7 footer edit,
 8 Mobile view img edit and menu bar,
-9 Adrees on contact page shd be fix,
+9 Adrees on contact page shd be fix
