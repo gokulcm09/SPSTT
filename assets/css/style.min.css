@@ -3932,3 +3932,23 @@ width: auto;
     width: auto;
   }
 }
+@media screen and (max-width: 750px) {
+  .contact-map{
+    height: 450px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* @media screen and (max-width: 750px){
+  .site-wrapper-reveal{
+    width: 20px;
+  }
+} */
+
+@media only screen and (max-width: 767px) {
+  .main-head{
+    font-size: 30px;
+  }
+}
