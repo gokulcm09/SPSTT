@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html
+    class=" js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+    lang="zxx">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+
+<head>
+    <style>
+        .dismissButton {
+            background-color: #fff;
+            border: 1px solid #dadce0;
+            color: #1a73e8;
+            border-radius: 4px;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            height: 36px;
+            cursor: pointer;
+            padding: 0 24px
+        }
+
+        .dismissButton:hover {
+            background-color: rgba(66, 133, 244, 0.04);
+            border: 1px solid #d2e3fc
+        }
+
+        .dismissButton:focus {
+            background-color: rgba(66, 133, 244, 0.12);
+            border: 1px solid #d2e3fc;
+            outline: 0
+        }
+
+        .dismissButton:hover:focus {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd
+        }
+
+        .dismissButton:active {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15)
+        }
+
+        .dismissButton:disabled {
+            background-color: #fff;
+            border: 1px solid #f1f3f4;
+            color: #3c4043
+        }
+    </style>
+    <style>
+        .gm-style .gm-style-mtc label,
+        .gm-style .gm-style-mtc div {
+            font-weight: 400
+        }
+
+        .gm-style .gm-style-mtc ul,
+        .gm-style .gm-style-mtc li {
+            box-sizing: border-box
+        }
+    </style>
+    <style>
+        .gm-control-active>img {
+            box-sizing: content-box;
+            display: none;
+            left: 50%;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .gm-control-active>img:nth-child(1) {
+            display: block
+        }
+
+        .gm-control-active:hover>img:nth-child(1),
+        .gm-control-active:active>img:nth-child(1) {
+            display: none
+        }
+
+        .gm-control-active:hover>img:nth-child(2),
+        .gm-control-active:active>img:nth-child(3) {
+            display: block
+        }
+    </style>
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700">
+    <style>
+        .gm-ui-hover-effect {
+            opacity: .6
+        }
+
+        .gm-ui-hover-effect:hover {
+            opacity: 1
+        }
+    </style>
+    <style>
+        .gm-style .gm-style-cc span,
+        .gm-style .gm-style-cc a,
+        .gm-style .gm-style-mtc div {
+            font-size: 10px;
+            box-sizing: border-box
+        }
+    </style>
+    <style>
+        @media print {
+
+            .gm-style .gmnoprint,
+            .gmnoprint {
+                display: none
+            }
+        }
+
+        @media screen {
+
+            .gm-style .gmnoscreen,
+            .gmnoscreen {
+                display: none
+            }
+        }
+    </style>
+    <style>
+        .gm-style-pbc {
+            transition: opacity ease-in-out;
+            background-color: rgba(0, 0, 0, 0.45);
+            text-align: center
+        }
+
+        .gm-style-pbt {
+            font-size: 22px;
+            color: white;
+            font-family: Roboto, Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+    </style>
+    <style>
+        .gm-style img {
+            max-width: none;
+        }
+
+        .gm-style {
+            font: 400 11px Roboto, Arial, sans-serif;
+            text-decoration: none;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chithralayam</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/img/logo.png">
+
+    <!-- CSS
+        ============================================ -->
+
+    <!-- Bootstrap CSS -->
+
+
+    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/common.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/util.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/map.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/marker.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/stats.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/onion.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d40.67161363841455&amp;2d-74.0104732923174&amp;2m2&amp;1d40.79259042049005&amp;2d-73.85827669551274&amp;2u14&amp;4sen-GB&amp;5e0&amp;6sm%40540000000&amp;7b0&amp;8e0&amp;12e2&amp;callback=_xdc_._o1is1c&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=52635"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i14!2i4826!3i6157!1m4!1m3!1i14!2i4827!3i6157!1m4!1m3!1i14!2i4826!3i6158!1m4!1m3!1i14!2i4826!3i6159!1m4!1m3!1i14!2i4827!3i6158!1m4!1m3!1i14!2i4827!3i6159!1m4!1m3!1i14!2i4828!3i6157!1m4!1m3!1i14!2i4828!3i6158!1m4!1m3!1i14!2i4828!3i6159!1m4!1m3!1i14!2i4826!3i6160!1m4!1m3!1i14!2i4827!3i6160!1m4!1m3!1i14!2i4828!3i6160!2m3!1e0!2sm!3i540264326!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjZ8cy5lOmcuZnxwLmM6I2ZmRjFGMUYxLHMudDo0fHAuYzojZmZGMUYxRjF8cC52Om9mZixzLnQ6NDl8cy5lOmcuc3xwLnY6b258cC5jOiNmZmYscy50OjQ5fHMuZTpnLmZ8cC5jOiNmZmYscy50OjUxfHMuZTpnLmZ8cC52Om9ufHAuYzojZmZGMUYxRjF8cC53OjEuOCxzLnQ6NTF8cy5lOmcuc3xwLmM6I2ZmRUNFQ0VDLHMudDoyfHMuZTpnLmZ8cC52Om9ufHAuYzojZmZGRjUxNTEscy50OjF8cy5lOmd8cC5jOiNmZmYscy50OjUwfHMuZTpnLmZ8cC5jOiNmZkYxRjFGMSxzLnQ6NTB8cy5lOmcuZnxwLmM6I2ZmZmZmZmZmLHMudDo1fHMuZTpnLmZ8cC52Om9ufHAuYzojZmZGOUY5Rjkscy50OjN8cy5lOmwudC5mfHAuYzojZmZCN0I3Qjcscy50OjF8cy5lOmwudC5mfHAudjpvbnxwLmM6I2ZmOGI4YjhiLHMudDoyfHMuZTpsLml8cC52Om9mZixzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDo1MHxzLmU6Zy5zfHAuYzojZmZkNmQ2ZDYscy50OjN8cy5lOmwuaXxwLnY6b2ZmLHMudDoyfHMuZTpnLmZ8cC5jOiNmZkVCRUJFQg!4e3!12m1!5b1&amp;callback=_xdc_._h6usy3&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=84061"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/controls.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Fdemo.hasthemes.com%2Fstomv-preview%2Fstomv%2Fcontact-us.html&amp;4sAIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;callback=_xdc_._wzopiv&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=2824"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/api/js/QuotaService.RecordEvent?1shttps%3A%2F%2Fdemo.hasthemes.com%2Fstomv-preview%2Fstomv%2Fcontact-us.html&amp;3sAIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;7s9nkolf&amp;10e1&amp;callback=_xdc_._hchhk6&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=123686"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i14!2i4826!3i6157!1m4!1m3!1i14!2i4827!3i6157!1m4!1m3!1i14!2i4826!3i6158!1m4!1m3!1i14!2i4826!3i6159!1m4!1m3!1i14!2i4827!3i6158!1m4!1m3!1i14!2i4827!3i6159!1m4!1m3!1i14!2i4828!3i6157!1m4!1m3!1i14!2i4828!3i6158!1m4!1m3!1i14!2i4828!3i6159!1m4!1m3!1i14!2i4826!3i6160!1m4!1m3!1i14!2i4827!3i6160!1m4!1m3!1i14!2i4828!3i6160!2m3!1e0!2sm!3i540264326!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e3!12m1!5b1&amp;callback=_xdc_._23e4t8&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=110972"></script>
+</head>
+
+<body>
+
+
+
+
+
+    <!--====================  header area ====================-->
+    <div class="header-area header-area--default">
+
+
+        <!-- Header Bottom Wrap Start -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-flex align-items-center">
+                        <div class="header__logo">
+							<div class="logo">
+								<a href="index.html">
+									<img class="Nav-Img" alt="" src="assets/images/img/NavLogo.png" />
+								</a>
+							</div>
+						</div>
+                        <div class="header-right">
+                            <div class="header__navigation menu-style-three d-none d-lg-block">
+                                <nav class="navigation-menu">
+                                    <ul>
+                                        <li class="has-children has-children--multilevel-submenu active">
+                                            <a href="index.html">
+                                                <span>Home
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="events-details.html">
+                                                <span>About
+                                                </span>
+                                            </a>
+
+                                        <li class="has-children">
+                                            <a href="gallery.html">
+                                                <span>Gallery
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="has-children has-children--multilevel-submenu">
+											<a href="#">
+												<span>Mandapams
+												</span>
+											</a>
+											<ul class="submenu">
+												<li>
+													<a href="vaikundam.html">
+														<span>Sree Vaikundom
+														</span>
+													</a>
+												</li>
+                                                <li>
+													<a href="ananthashayanam.html">
+														<span>Ananthasayanam
+														</span>
+													</a>
+												</li>
+                                                <li>
+													<a href="Bhajanapura.html">
+														<span>Bhajanappura
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="mahalakshmi.html">
+														<span>Mahalakshmi
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="sudarshanam.html">
+														<span>Sudharsan
+														</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+                                        <li class="has-children">
+                                            <a href="chithralayam.html">
+                                                <span>Chithralayam
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="contact-us.html">
+                                                <span>Contact
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+
+                            <!-- <div class="header-btn text-right d-none d-sm-block ml-lg-4">
+                                <a class="btn-circle btn-default btn" href="#">Donate</a>
+                            </div> -->
+
+                            <!-- mobile menu -->
+                            <div class="mobile-navigation-icon d-block d-lg-none" id="mobile-menu-trigger">
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Bottom Wrap End -->
+
+    </div>
+    <!--====================  End of header area  ====================-->
+
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area--bg-two bg-overlay-black-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="breadcrumb-title text-white">Sree Uthradom Tirunal Marthanda Varma Chithralayam</h3>
+                    <!-- breadcrumb-list start -->
+                    <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Sree Uthradom Tirunal Marthanda Varma Chithralayam</li>
+                    </ul>
+                    <!-- breadcrumb-list end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb-area end -->
+
+
+
+
+
+
+    <p class="mandapam-details">
+        A journey down the lane of history is always exciting. What if that journey brings before you the picture of a
+        rich and vibrant past, that too by means of some spectacular paintings and photographs? Incredible isn't it?
+        Then welcome to SUTMC, Sree Uthradom Tirunal Marthanda Varma Chithralayam, a museum that offers a time-travel
+        through the last two hundred years of Travancore. Conceived by late Sree Uthradom Thirunal Marthanda Varma, the
+        museum provides the public an authentic perspective on the history, tradition and culture of Travancore.
+        The museum, with its rare collections that shaped modern Travancore, not only generates an interest in the
+        history of Travancore but also provides a rare insight into the glittering past of the State. Besides the
+        valuable articles possessed by the royalty, the collection also includes several fascinating photographs taken
+        by eminent photographers including the His Highness himself.
+        The pictures have been meticulously selected and great care has been taken in preparing them. The photographs
+        have been blown up for effect and are printed in quality archival ink and paintings are enhanced using oil
+        colours, so that they will reflect the real heritage of Travancore. Each image is lit up with mood lighting and
+        is supported by an attractive frame that adds more charm to them. A multimedia presentation of the pictures is
+        available on request from the visitors. On request, they would also be provided with an iPod, which would give
+        them details regarding the artifacts on display. The museum is open from 0900 to 1300 and 1500 to 1700 hours.
+        The paintings and photographs are set inside the royal ambiance of Rangavilasam Palace near Vettimurichakotta in
+        the East Fort. The palace with its splendid architecture is a spectacle in itself. Built in the year 1839 by the
+        then Maharaja of Travancore Swathi Thirunal Rama Varma, the palace stands testimony to the splendour of Kerala
+        style of architecture. The ornate roofs, wooden pillars, wood-carved gables and wonderful façade all make it
+        simple, flawless and fascinating. It was the traditional art and picture gallery of the Travancore royal family.
+
+
+
+
+    <div class="site-wrapper-reveal" style="width: 65%; height: auto; margin-left: auto; margin-right: auto;">
+
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="6"></li> -->
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="assets/images/Mandapams/Chithralayam/1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/images/Mandapams/Chithralayam/3.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/images/Mandapams/Chithralayam/6.jpg" alt="Third slide">
+                </div>
+                <!-- <div class="carousel-item">
+                <img class="d-block w-100" src="assets/images/Mandapams/Vaikundam/4.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/images/Mandapams/Vaikundam/5.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/images/Mandapams/Vaikundam/6.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/images/Mandapams/Vaikundam/7.jpg" alt="Third slide">
+              </div> -->
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <br><br><br>
+
+
+
+
+    </div>
+
+
+
+    <div class="causes-details-area section-space--pb_120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="mission-wrap mr-lg-5">
+                        <div class="section-title-wrap text-left">
+                            <h4 class="section-title-normal mb-30">Timings</h4>
+                        </div>
+
+                        <div class="target-content">
+                            <ul class="mt-30 mision-list">
+                                <li>&gt; Holiday</li>
+                                <li>&gt; Tuesday:- 09:00 AM - 05:00 PM</li>
+                                <li>&gt; Wednesday:- 09:00 AM - 05:00 PM</li>
+                                <li>&gt; Thursday:- 09:00 AM - 05:00 PM</li>
+                                <li>&gt; 09:00 AM - 05:00 PM</li>
+                                <li>&gt; 09:00 AM - 05:00 PM</li>
+                                <li>&gt; Sunday:- Closed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="target-wrap ml-lg-5 small-mt__40">
+                        <div class="section-title-wrap text-left">
+                            <h4 class="section-title-normal mb-30">Office</h4>
+                        </div>
+
+                        <div class="target-content">
+                            <ul class="mt-30 mision-list">
+                                <li>&gt; Adult Fee ₹20</li>
+                                <li>&gt; Children Fee ₹10 </li>
+                                <li>&gt; Foreigners Fee ₹20</li>
+                                <li>&gt; Camera and Photography Not Allowed</li>
+
+                                <li>&gt; <a href="callto: 0471 2479245"> Ph : 0471 2479245 </a> </li>
+                                <li>&gt; <a href="mailto: spstrusttvm@gmail.com">spstrusttvm@gmail.com</a>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="mission-wrap mr-lg-5">
+                        <div class="section-title-wrap text-left">
+                            <h4 class="section-title-normal mb-30">Location</h4>
+                            <iframe class="contact-map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15784.407198877787!2d76.92647288106666!3d8.489482386560537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb0a3bbf1e19%3A0x23cf2422647fe388!2sH.H%20Uthradam%20Thirunal%20Marthanda%20Varma%20Chithralayam!5e0!3m2!1sen!2sin!4v1612675956221!5m2!1sen!2sin"
+                                width="350" height="210" frameborder="0" style="border:0;" allowfullscreen=""
+                                aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--========== Footer Area Start ==========-->
+    <footer class="footer-area bg-footer">
+        <div class="footer-top section-space--ptb_80 section-pb text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Address</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li><span>Sree Padmanabha Swamy Temple <br>
+                                            Fort, Thiruvananthapuram - 695023, <br>
+                                            Kerala, India</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Related Links</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="events-details.html">About</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="terms.html">Terms & Conditions</a></li>
+                                    <li><a href="contact-us.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Information</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li>Monday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Tuesday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Wednesday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Thursday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Friday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Saturday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Sunday:- Closed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Related Links</h6>
+                            </div>
+                            <div class="footer-logo mb-15">
+                                <a href="index.html"><img src="assets/images/logo/footer-logo.png" alt=""></a>
+                            </div>
+                            <!-- <div class="footer-contents">
+                                <p> Subscribe to our Newsletter &amp; stay update. </p>
+                                <div class="newsletter-box">
+                                    <input type="text" placeholder="Enter your mail address">
+                                    <button><i class="flaticon-paper-plane"></i></button>
+                                </div> -->
+
+                            <!-- <ul class="footer-social-share mt-20">
+                                    <li><a href="#"><i class="flaticon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-pinterest-social-logo"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-youtube"></i></a></li>
+                                </ul> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copy-right-box">
+                            <p class="text-white">Copyright © 2021 GADS LLP <a href="https://gadssolutions.in/"
+                                    target="_blank">All Right Reserved</a>.</p>
+                            <p class=" text-white"><a href="#">Privacy policy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--==========// Footer Area End ==========-->
+
+
+
+
+
+    <!--====================  scroll top ====================-->
+    <a href="#" class="scroll-top" id="scroll-top">
+        <i class="arrow-top flaticon-up-arrow"></i>
+        <i class="arrow-bottom flaticon-up-arrow"></i>
+    </a>
+    <!--====================  End of scroll top  ====================-->
+
+    <!--====================  mobile menu overlay ====================-->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-overlay__inner">
+            <div class="mobile-menu-overlay__header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-8">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/images/img/NavLogo.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content text-right">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-overlay__body">
+                <nav class="offcanvas-navigation">
+                    <ul>
+                        <li class="has-children has-children--multilevel-submenu active">
+                            <a href="index.html">
+                                <span>Home
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children">
+                            <a href="events-details.html">
+                                <span>About
+                                </span>
+                            </a>
+                        
+                        <li class="has-children">
+                            <a href="gallery.html">
+                                <span>Gallery
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children ">
+                            <a href="vaikundam.html">
+                                <span>Sree Vaikundom
+                                </span>
+                            </a>
+                            </li>
+                            <li class="has-children ">
+                                <a href="ananthashayanam.html">
+                                    <span>Ananthasayanam
+                                    </span>
+                                </a>
+                                </li>
+                                <li class="has-children ">
+                                    <a href="Bhajanapura.html">
+                                        <span>Bhajanappura
+                                        </span>
+                                    </a>
+                                    </li>
+                                    <li class="has-children ">
+                                        <a href="mahalakshmi.html">
+                                            <span>Mahalakshmi
+                                            </span>
+                                        </a>
+                                        </li>
+                                        <li class="has-children ">
+                                            <a href="sudarshanam.html">
+                                                <span>Sudharsan
+                                                </span>
+                                            </a>
+                                            </li>
+                        </li>
+                        <li class="has-children">
+                            <a href="chithralayam.html">
+                                <span>Chithralayam
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children">
+                            <a href="contact-us.html">
+                                <span>Contact
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of mobile menu overlay  ====================-->
+
+
+
+
+
+    <!-- JS
+    ============================================ -->
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;callback=initMap"></script>
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+
+
+    <script src="assets/js/plugins/plugins.min.js"></script>
+
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

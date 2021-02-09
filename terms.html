@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html
+    class=" js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+    lang="zxx">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+
+<head>
+    <style>
+        .dismissButton {
+            background-color: #fff;
+            border: 1px solid #dadce0;
+            color: #1a73e8;
+            border-radius: 4px;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            height: 36px;
+            cursor: pointer;
+            padding: 0 24px
+        }
+
+        .dismissButton:hover {
+            background-color: rgba(66, 133, 244, 0.04);
+            border: 1px solid #d2e3fc
+        }
+
+        .dismissButton:focus {
+            background-color: rgba(66, 133, 244, 0.12);
+            border: 1px solid #d2e3fc;
+            outline: 0
+        }
+
+        .dismissButton:hover:focus {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd
+        }
+
+        .dismissButton:active {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15)
+        }
+
+        .dismissButton:disabled {
+            background-color: #fff;
+            border: 1px solid #f1f3f4;
+            color: #3c4043
+        }
+    </style>
+    <style>
+        .gm-style .gm-style-mtc label,
+        .gm-style .gm-style-mtc div {
+            font-weight: 400
+        }
+
+        .gm-style .gm-style-mtc ul,
+        .gm-style .gm-style-mtc li {
+            box-sizing: border-box
+        }
+    </style>
+    <style>
+        .gm-control-active>img {
+            box-sizing: content-box;
+            display: none;
+            left: 50%;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .gm-control-active>img:nth-child(1) {
+            display: block
+        }
+
+        .gm-control-active:hover>img:nth-child(1),
+        .gm-control-active:active>img:nth-child(1) {
+            display: none
+        }
+
+        .gm-control-active:hover>img:nth-child(2),
+        .gm-control-active:active>img:nth-child(3) {
+            display: block
+        }
+    </style>
+    <link type="text/css" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700">
+    <style>
+        .gm-ui-hover-effect {
+            opacity: .6
+        }
+
+        .gm-ui-hover-effect:hover {
+            opacity: 1
+        }
+    </style>
+    <style>
+        .gm-style .gm-style-cc span,
+        .gm-style .gm-style-cc a,
+        .gm-style .gm-style-mtc div {
+            font-size: 10px;
+            box-sizing: border-box
+        }
+    </style>
+    <style>
+        @media print {
+
+            .gm-style .gmnoprint,
+            .gmnoprint {
+                display: none
+            }
+        }
+
+        @media screen {
+
+            .gm-style .gmnoscreen,
+            .gmnoscreen {
+                display: none
+            }
+        }
+    </style>
+    <style>
+        .gm-style-pbc {
+            transition: opacity ease-in-out;
+            background-color: rgba(0, 0, 0, 0.45);
+            text-align: center
+        }
+
+        .gm-style-pbt {
+            font-size: 22px;
+            color: white;
+            font-family: Roboto, Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+    </style>
+    <style>
+        .gm-style img {
+            max-width: none;
+        }
+
+        .gm-style {
+            font: 400 11px Roboto, Arial, sans-serif;
+            text-decoration: none;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SPSTT Contact</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/img/logo.png">
+
+    <!-- CSS
+        ============================================ -->
+
+    <!-- Bootstrap CSS -->
+
+
+    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+
+    <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/common.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/util.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/map.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/marker.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/stats.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/onion.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d40.67161363841455&amp;2d-74.0104732923174&amp;2m2&amp;1d40.79259042049005&amp;2d-73.85827669551274&amp;2u14&amp;4sen-GB&amp;5e0&amp;6sm%40540000000&amp;7b0&amp;8e0&amp;12e2&amp;callback=_xdc_._o1is1c&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=52635"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i14!2i4826!3i6157!1m4!1m3!1i14!2i4827!3i6157!1m4!1m3!1i14!2i4826!3i6158!1m4!1m3!1i14!2i4826!3i6159!1m4!1m3!1i14!2i4827!3i6158!1m4!1m3!1i14!2i4827!3i6159!1m4!1m3!1i14!2i4828!3i6157!1m4!1m3!1i14!2i4828!3i6158!1m4!1m3!1i14!2i4828!3i6159!1m4!1m3!1i14!2i4826!3i6160!1m4!1m3!1i14!2i4827!3i6160!1m4!1m3!1i14!2i4828!3i6160!2m3!1e0!2sm!3i540264326!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjZ8cy5lOmcuZnxwLmM6I2ZmRjFGMUYxLHMudDo0fHAuYzojZmZGMUYxRjF8cC52Om9mZixzLnQ6NDl8cy5lOmcuc3xwLnY6b258cC5jOiNmZmYscy50OjQ5fHMuZTpnLmZ8cC5jOiNmZmYscy50OjUxfHMuZTpnLmZ8cC52Om9ufHAuYzojZmZGMUYxRjF8cC53OjEuOCxzLnQ6NTF8cy5lOmcuc3xwLmM6I2ZmRUNFQ0VDLHMudDoyfHMuZTpnLmZ8cC52Om9ufHAuYzojZmZGRjUxNTEscy50OjF8cy5lOmd8cC5jOiNmZmYscy50OjUwfHMuZTpnLmZ8cC5jOiNmZkYxRjFGMSxzLnQ6NTB8cy5lOmcuZnxwLmM6I2ZmZmZmZmZmLHMudDo1fHMuZTpnLmZ8cC52Om9ufHAuYzojZmZGOUY5Rjkscy50OjN8cy5lOmwudC5mfHAuYzojZmZCN0I3Qjcscy50OjF8cy5lOmwudC5mfHAudjpvbnxwLmM6I2ZmOGI4YjhiLHMudDoyfHMuZTpsLml8cC52Om9mZixzLnQ6MnxzLmU6bHxwLnY6b2ZmLHMudDo1MHxzLmU6Zy5zfHAuYzojZmZkNmQ2ZDYscy50OjN8cy5lOmwuaXxwLnY6b2ZmLHMudDoyfHMuZTpnLmZ8cC5jOiNmZkVCRUJFQg!4e3!12m1!5b1&amp;callback=_xdc_._h6usy3&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=84061"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps-api-v3/api/js/43/6/intl/en_gb/controls.js"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Fdemo.hasthemes.com%2Fstomv-preview%2Fstomv%2Fcontact-us.html&amp;4sAIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;callback=_xdc_._wzopiv&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=2824"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/api/js/QuotaService.RecordEvent?1shttps%3A%2F%2Fdemo.hasthemes.com%2Fstomv-preview%2Fstomv%2Fcontact-us.html&amp;3sAIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;7s9nkolf&amp;10e1&amp;callback=_xdc_._hchhk6&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=123686"></script>
+    <script type="text/javascript" charset="UTF-8"
+        src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i14!2i4826!3i6157!1m4!1m3!1i14!2i4827!3i6157!1m4!1m3!1i14!2i4826!3i6158!1m4!1m3!1i14!2i4826!3i6159!1m4!1m3!1i14!2i4827!3i6158!1m4!1m3!1i14!2i4827!3i6159!1m4!1m3!1i14!2i4828!3i6157!1m4!1m3!1i14!2i4828!3i6158!1m4!1m3!1i14!2i4828!3i6159!1m4!1m3!1i14!2i4826!3i6160!1m4!1m3!1i14!2i4827!3i6160!1m4!1m3!1i14!2i4828!3i6160!2m3!1e0!2sm!3i540264326!3m17!2sen-GB!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e3!12m1!5b1&amp;callback=_xdc_._23e4t8&amp;key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;token=110972"></script>
+</head>
+
+<body>
+
+
+
+
+
+    <!--====================  header area ====================-->
+    <div class="header-area header-area--default">
+
+
+        <!-- Header Bottom Wrap Start -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 d-flex align-items-center">
+                        <div class="header__logo">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img class="Nav-Img" alt="" src="assets/images/img/NavLogo.png" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <div class="header__navigation menu-style-three d-none d-lg-block">
+                                <nav class="navigation-menu">
+                                    <ul>
+                                        <li class="has-children has-children--multilevel-submenu active">
+                                            <a href="index.html">
+                                                <span>Home
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="events-details.html">
+                                                <span>About
+                                                </span>
+                                            </a>
+
+                                        <li class="has-children">
+                                            <a href="gallery.html">
+                                                <span>Gallery
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="has-children has-children--multilevel-submenu">
+                                            <a href="#">
+                                                <span>Mandapams
+                                                </span>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a href="vaikundam.html">
+                                                        <span>Vaikundam
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ananthashayanam.html">
+                                                        <span>Ananthashayanam
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="Bhajanapura.html">
+                                                        <span>Bhajanapura
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="mahalakshmi.html">
+                                                        <span>Mahalakshmi
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="sudarshanam.html">
+                                                        <span>Sudarshanam
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="chithralayam.html">
+                                                <span>Chithralayam
+                                                </span>
+                                            </a>
+                                        </li>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="contact-us.html">
+                                                <span>Contact
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+
+                            <!-- <div class="header-btn text-right d-none d-sm-block ml-lg-4">
+                                <a class="btn-circle btn-default btn" href="#">Donate</a>
+                            </div> -->
+
+                            <!-- mobile menu -->
+                            <div class="mobile-navigation-icon d-block d-lg-none" id="mobile-menu-trigger">
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Bottom Wrap End -->
+
+    </div>
+    <!--====================  End of header area  ====================-->
+
+
+
+
+
+
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area--bg-two bg-overlay-black-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="breadcrumb-title text-white">Contact</h3>
+                    <!-- breadcrumb-list start -->
+                    <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Term & Conditions</li>
+                    </ul>
+                    <!-- breadcrumb-list end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="site-wrapper-reveal">
+
+        <!-- <div class="contact-page-wrapper section-space--pt_120"> -->
+            <img src="assets/images/img/rate.jpg" class="img-fluid" alt="Donation Image" />
+            <br><br>
+            <p>
+                <b>Terms and Conditions</b> to book and Use Mandapams under Sree Padmanabha Swami Temple Trust <br>
+
+                Mandapams under Sree Padmanabha Swami Temple Trust is only allowed to conduct Hindu rites and rituals.
+                Mandapams are not allowed to use for other purposes. Vegetarian meals are only allowed to cook and serve
+                on the Mandapam. Mandapams can be booked from 10 AM to 5 P M on every working days. <br>
+
+                <b>1.</b> Mandapams are only supposed to use for the purposes listed in the application form, signed while
+                booking. <br>
+                <b>2.</b> For booking Mandapams, you have to pay the fees and EMD assigned by the Trust and collect the receipt
+                beforehand. <br>
+                <b>3.</b> On the same day of booking, you have to pay the fees and EMD to the trust. Fees except EMD won't be
+                returned at any cost. If you want the fee to be returned due to any unfortunate cancellation, then you
+                have to notice the trust 3 months before the booking date and also the Mandapams should have any other
+                booking on the same date. If the Mandapam hasn't got any other booking then fees won't be returned and
+                the Trust's decision will be final. <br>
+                <b>4.</b> Plastic products banned under the Kerala Government order (17-12-2019) is not allowed in the Mandapam
+                premises. Hence such products are not even allowed to use for emergency purposes. <br>
+                <b>5.</b> Things brought under written permission has to be returned as such and then report form the concerned
+                Mandapam Authority and EMD payment receipt has to returned to Trust office in person and then paid EMD
+                will be returned back to you. Commodities that belong to the Mandapam canot be taken outside the
+                premises. <br>
+                <b>6.</b> Plates and lights for emergency situations can be bought from the office after noting down in the
+                register. Trust is not responsible for the things out of stock, Nadaswarams and for other purposes. Any
+                complaint due to third party association wont be welcomed by the Trust authority and the concerned party
+                will be responsible for any lose faced by the trust. <br>
+                <b>7.</b> Mandapam, decoration, generator, cooking gas etc can be done by a contractor in the rate fixed by the
+                trust. If you do the aforementioned works from a outside agency, then you should pay EMD of Rs. 15000
+                for Sree Vaikundam Mandapam and Rs. 5000 for other Mandapams and after deducting the taxes and other
+                charges under the Royalty charges by Trust, the balance amount will be returned back to you. <br>
+                <b>8.</b> It is not allowed to cook or use non veg items or drugs in Mandapam premises. Electric lighter, fan,
+                pipes, furnitures etc should not be misused or damaged and also make sure to keep the premises neat. Any
+                instructions given by mandapam authorities regarding the proceedings should be followed. Payment had to
+                be given for using genarator for requirements like video recordings, halogen lights, serial lights, mics
+                and so on.Crane video, helicams are not allowed in the Mandapams. <br>
+                <b>9.</b> If multiple functions are to be conducted at the booking time , an appilication has to be given in
+                advance and also have to pay a fixed amount. Permission must be obtained in advance by paying the extra
+                payment for special receptions, functions, etc., on the day of the wedding or the day before, and for
+                the erection of a separate pavilion, pandal, or shamiana outside the hall. Those who want to build a
+                shed, pandal or shamiana have to pay a floor rent of Rs 2 per square foot in addition. <br>
+                <b>10.</b> After the marriage,the bride and groom should write the required details and sign in the register
+                kept in the hall.Birth certificates and address proof of the bride and groom should be handed over to
+                the mandapam manager before the marriage.The certificate should be bought within a week and registered
+                at the concerned office. Legally recognized names of the bride and groom should be entered . Names
+                entered in the register will not be changed for any reason. <br>
+                <b>11.</b> Once you have booked a Mandapam, you're not allowed to give the Mandapam to any other person for
+                emergency situations. Mandapams can't be changed after booking. <br>
+                <b>12.</b> Any complaints and suggestions regarding emergency uses can be noted by the applicants in the
+                register placed in Mandapams. <br>
+                <b>13.</b> All the instructions given by the State and Central Government is applicable to the person from the
+                day of booking. No one has the right to violate any rules even if they had booked the Mandapam before
+                publishing the notice from the authority if so charges will be laid from the EMD and the applicant
+                doesn't have any right to raise any complaint against the authority. <br>
+            </p>
+
+            
+        <!-- </div> -->
+
+
+    </div>
+
+
+
+    <!--========== Footer Area Start ==========-->
+    <footer class="footer-area bg-footer">
+        <div class="footer-top section-space--ptb_80 section-pb text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Address</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li><span>Sree Padmanabha Swamy Temple <br>
+                                            Fort, Thiruvananthapuram - 695023, <br>
+                                            Kerala, India</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Related Links</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="events-details.html">About</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+
+                                    <li><a href="contact-us.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Information</h6>
+                            </div>
+                            <div class="footer-contents">
+                                <ul>
+                                    <li>Monday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Tuesday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Wednesday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Thursday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Friday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Saturday:- 10:00 AM - 05:00 PM</li>
+                                    <li>Sunday:- Closed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="widget-footer mt-30">
+                            <div class="footer-title">
+                                <h6>Related Links</h6>
+                            </div>
+                            <div class="footer-logo mb-15">
+                                <a href="index.html"><img src="assets/images/logo/footer-logo.png" alt=""></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copy-right-box">
+                            <p class="text-white">Copyright © 2021 GADS LLP <a href="https://gadssolutions.in/"
+                                    target="_blank">All Right Reserved</a>.</p>
+                            <p class=" text-white"><a href="#">Privacy policy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--==========// Footer Area End ==========-->
+
+
+
+
+
+    <!--====================  scroll top ====================-->
+    <a href="#" class="scroll-top" id="scroll-top">
+        <i class="arrow-top flaticon-up-arrow"></i>
+        <i class="arrow-bottom flaticon-up-arrow"></i>
+    </a>
+    <!--====================  End of scroll top  ====================-->
+
+    <!--====================  mobile menu overlay ====================-->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-overlay__inner">
+            <div class="mobile-menu-overlay__header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-8">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/images/img/NavLogo.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content text-right">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-overlay__body">
+                <nav class="offcanvas-navigation">
+                    <ul>
+                        <li class="has-children has-children--multilevel-submenu active">
+                            <a href="index.html">
+                                <span>Home
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children">
+                            <a href="events-details.html">
+                                <span>About
+                                </span>
+                            </a>
+
+                        <li class="has-children">
+                            <a href="gallery.html">
+                                <span>Gallery
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children ">
+                            <a href="vaikundam.html">
+                                <span>Sree Vaikundom
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children ">
+                            <a href="ananthashayanam.html">
+                                <span>Ananthasayanam
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children ">
+                            <a href="Bhajanapura.html">
+                                <span>Bhajanappura
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children ">
+                            <a href="mahalakshmi.html">
+                                <span>Mahalakshmi
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children ">
+                            <a href="sudarshanam.html">
+                                <span>Sudharsan
+                                </span>
+                            </a>
+                        </li>
+                        </li>
+                        <li class="has-children">
+                            <a href="chithralayam.html">
+                                <span>Chithralayam
+                                </span>
+                            </a>
+                        </li>
+                        <li class="has-children">
+                            <a href="contact-us.html">
+                                <span>Contact
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of mobile menu overlay  ====================-->
+
+
+
+
+
+    <!-- JS
+    ============================================ -->
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&amp;callback=initMap"></script>
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+
+
+    <script src="assets/js/plugins/plugins.min.js"></script>
+
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
