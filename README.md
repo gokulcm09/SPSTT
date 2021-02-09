@@ -19,7 +19,8 @@ git pull origin main
 =======
 4 Apply mandapam design to all, also chithralayam, important
 5 img compress on process
->>>>>>> a9cdcfd69c8dabe8ec9c1a0f74dc84bf4cc04335
+>>>>>>> a9cdcfd9c8dabe8ec9c1a0f74dc84bf4cc04335
 7 footer edit,
 9 Adrees on contact page shd be fix
 form backend
+
