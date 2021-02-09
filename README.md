@@ -10,5 +10,8 @@ git pull origin main
 
 # To do : 
 
-backend
-address page font size
+1. backend
+2. form backend 
+3. Vaikundam carousel bug fix 
+4. Finalizing project
+5. Testing 
