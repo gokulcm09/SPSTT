@@ -124,5 +124,12 @@
         }
 
         .textcard{
-            padding: 20px;
+            padding: 20px 248px;
+            border-radius: 12px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .textcard{
+                padding: 10px 20px
+            }
         }
