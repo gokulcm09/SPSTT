@@ -3830,7 +3830,7 @@ input[type="checkbox"] {
   border: 2px solid #ffd000;
   color: #ffd000;
   margin: auto;
-  font-size: 40px;
+  font-size: 35px;
 }
 .single-contact-info .contact-info {
   margin-top: 30px;
@@ -3853,7 +3853,7 @@ input[type="checkbox"] {
   position: absolute;
 }
 .single-contact-info .contact-info p {
-  font-size: 24px;
+  font-size: 18px;
 }
 #googleMap-1 {
   height: 600px;
