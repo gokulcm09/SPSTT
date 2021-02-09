@@ -10,6 +10,5 @@ git pull origin main
 
 # To do : 
 
-4 Apply mandapam design to all, also chithralayam, important
-9 Adrees on contact page shd be fix
-10 form backend
+backend
+address page font size
