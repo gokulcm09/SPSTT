@@ -11,7 +11,6 @@ git pull origin main
 # To do : 
 
 1. backend
-2. form backend 
-3. Check slot button on all page (landing image)
+2. Contect form backend 
 4. Finalizing project
 5. Testing 
