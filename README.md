@@ -12,6 +12,6 @@ git pull origin main
 
 1. backend
 2. form backend 
-3. Vaikundam carousel bug fix 
+3. Check slot button on all page (landing image)
 4. Finalizing project
 5. Testing 

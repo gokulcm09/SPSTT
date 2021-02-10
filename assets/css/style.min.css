@@ -629,7 +629,7 @@ input[type="checkbox"] {
   padding-top: 136px;
   padding-bottom: 131px;
   background-size: cover;
-  background-image: url(../images/bg/breadcrumb-01.png);
+  background-image: url(../images/img/bg-img2.jpg);
 }
 @media only screen and (max-width: 767px),
   only screen and (min-width: 768px) and (max-width: 991px),
@@ -713,7 +713,7 @@ input[type="checkbox"] {
   .breadcrumb-area--bg-two {
     padding-top: 80px;
     padding-bottom: 80px;
-    background-image: url(../images/bg/breadcrumb-03.png);
+    background-image: url(../images/img/bg-img2.jpg);
   }
 }
 .breadcrumb-area-mission {
@@ -723,7 +723,7 @@ input[type="checkbox"] {
   padding-top: 450px;
   padding-bottom: 60px;
   background-size: cover;
-  background-image: url(../images/bg/breadcrumb-02.png);
+  background-image: url(../images/img/bg-img2.jpg);
 }
 @media only screen and (max-width: 767px),
   only screen and (min-width: 768px) and (max-width: 991px),
