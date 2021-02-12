@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<?php
+session_start();
+require_once "pdo.php";
+
+$mindate = date('Y-m-d'); 
+
+if(isset($_POST['date']) && isset($_POST['mandapam'])){
+    $year = 'booking'.substr($_POST['date'], 0, 4); 
+    $stmt = $pdo->prepare('SELECT available_time FROM '.$year.' where mandapam = :mandapam AND booking_date = :date');
+    $stmt->execute(array(':mandapam' => $_POST['mandapam'], ':date'=> $_POST['date']));
+    while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) ) {
+        $_SESSION['available'] = false;
+        $_SESSION['available_time'] = $row['available_time'];
+        header('Location: availability.php');
+        return;
+    }
+    $_SESSION['available'] = $_SESSION['available'] = true;
+    header('Location: availability.php');
+    return;
+  }
+
+?>
 <html
     class=" js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
     lang="zxx">
@@ -148,6 +169,94 @@
             font: 400 11px Roboto, Arial, sans-serif;
             text-decoration: none;
         }
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+} 
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
     </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -333,17 +442,44 @@
     </div>
     <br><br>
 
-    <div class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-      
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+<div class="d-flex flex-wrap justify-content-center align-item-center">
+    <div class="d-flex flex-wrap justify-content-center align-item-center shadow px-3 mb-5" style="width=410px;  border-radius: 5px;">
+        <form method="POST">
+        <label for="date">Select a date</label>
+                <input type="date" id="date" name="date" max="2025-12-31">
+                <br>
+                <label for="mandapam">Choose a Mandapam</label>
+                <select id="mandapam" name="mandapam"> 
+                    <option value="Sree Vaikundom">Sree Vaikundom</option>
+                    <option value="Ananthasayanam">Ananthasayanam</option>
+                    <option value="Bhajanappura">Bhajanappura</option>
+                    <option value="Mahalakshmi">Mahalakshmi</option>
+                    <option value="Sudharsan">Sudharsan</option>
+                </select>
+                <br>
+            <button type="submit" class="btn btn-outline-warning" style="width:130px; border-radius: 25px;">Submit</button>
+        </form>
     </div>
+</div>
+
+<p> 
+    <?php 
+        if (isset($_SESSION['available'])){
+            if($_SESSION['available'] === true){
+                echo '<p style="color:green"> Mandapam is available! Please contact the office for booking</p>';
+                unset($_SESSION['available']);
+            }else if($_SESSION['available'] === false && isset($_SESSION['available_time'])){
+                echo '<p style="color:red">'.$_SESSION['available_time'].'</p>';
+                unset($_SESSION['available']);
+                unset($_SESSION['available_time']);
+            }
+        }else{
+            echo "Please select date and mandapam";
+        } 
+    ?>
+</p>
+
+</div>
     
     <!--========== Footer Area Start ==========-->
     <footer class="footer-area bg-footer">
