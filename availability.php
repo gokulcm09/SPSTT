@@ -276,7 +276,7 @@ a:hover {
 
     <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
     <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.min.css">
 
@@ -444,42 +444,53 @@ a:hover {
 
 <div class="d-flex flex-wrap justify-content-center align-item-center">
     <div class="d-flex flex-wrap justify-content-center align-item-center shadow px-3 mb-5" style="width=410px;  border-radius: 5px;">
-        <form method="POST">
-        <label for="date">Select a date</label>
-                <input type="date" id="date" name="date" max="2025-12-31">
-                <br>
-                <label for="mandapam">Choose a Mandapam</label>
-                <select id="mandapam" name="mandapam"> 
+        <form method="POST" class="d-flex flex-wrap justify-content-center align-item-center">
+            <div class="d-flex flex-column bd-highlight mb-3 ">
+            <label class="p-2 bd-highlight" for="date">Select date : </label>
+            <input class="p-2 bd-highlight my-3" type="date" id="date" name="date" max="2025-12-31">
+                <label class="p-2 bd-highlight" for="mandapam">Select Mandapam : </label>
+                <select class="p-2 bd-highlight" id="mandapam" name="mandapam"> 
                     <option value="Sree Vaikundom">Sree Vaikundom</option>
                     <option value="Ananthasayanam">Ananthasayanam</option>
                     <option value="Bhajanappura">Bhajanappura</option>
                     <option value="Mahalakshmi">Mahalakshmi</option>
                     <option value="Sudharsan">Sudharsan</option>
                 </select>
-                <br>
-            <button type="submit" class="btn btn-outline-warning" style="width:130px; border-radius: 25px;">Submit</button>
+                <button type="submit" class="p-2 bd-highlight btn btn-outline-warning mt-3" style="width:130px; border-radius: 25px; align-self: center;">Check</button>
+            </div>
+            
         </form>
     </div>
 </div>
-
-<p> 
+</div>
+   
+   <div  class="d-flex flex-wrap align-items-center justify-content-center">
     <?php 
         if (isset($_SESSION['available'])){
             if($_SESSION['available'] === true){
-                echo '<p style="color:green"> Mandapam is available! Please contact the office for booking</p>';
+                echo '<div class="alert alert-success alert-dismissible fade show" role="alert mb-5 " style="width:500px;">
+                Mandapam is available! Please contact the office for booking
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>';
                 unset($_SESSION['available']);
             }else if($_SESSION['available'] === false && isset($_SESSION['available_time'])){
-                echo '<p style="color:red">'.$_SESSION['available_time'].'</p>';
+                echo '<div class="alert alert-danger alert-dismissible fade show mb-5" role="alert" style="width:500px;">
+                <strong>Sorry! </strong>'.$_SESSION['available_time'].'
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>';   
                 unset($_SESSION['available']);
                 unset($_SESSION['available_time']);
             }
         }else{
-            echo "Please select date and mandapam";
+            echo "<a href="" class="badge badge-light">Please select date and mandapam</a>";
         } 
     ?>
-</p>
+    </div>
 
-</div>
     
     <!--========== Footer Area Start ==========-->
     <footer class="footer-area bg-footer">
@@ -682,7 +693,9 @@ a:hover {
     <!-- JS
     ============================================ -->
 
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Modernizer JS -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>

@@ -10,7 +10,6 @@ git pull origin main
 
 # To do : 
 
-1. backend
-2. Contect form backend 
-4. Finalizing project
-5. Testing 
+1. Contect form backend 
+2. Finalizing project
+3. Testing 
