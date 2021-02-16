@@ -8,7 +8,7 @@
 html,
 body {
   height: 100%;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 body {
   line-height: 1.74;
@@ -3923,18 +3923,18 @@ input[type="checkbox"] {
   visibility: visible;
 }
 
-.Nav-Img{
-height: 80px;
-width: auto;
+.Nav-Img {
+  height: 80px;
+  width: auto;
 }
 @media screen and (max-width: 750px) {
-  .Nav-Img{
+  .Nav-Img {
     height: 45px;
     width: auto;
   }
 }
 @media screen and (max-width: 750px) {
-  .contact-map{
+  .contact-map {
     height: 450px;
     width: auto;
     margin-left: auto;
@@ -3949,7 +3949,7 @@ width: auto;
 } */
 
 @media only screen and (max-width: 767px) {
-  .main-head{
+  .main-head {
     font-size: 30px;
   }
 }

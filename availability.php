@@ -447,7 +447,7 @@ a:hover {
         <form method="POST" class="d-flex flex-wrap justify-content-center align-item-center">
             <div class="d-flex flex-column bd-highlight mb-3 ">
             <label class="p-2 bd-highlight" for="date">Select date : </label>
-            <input class="p-2 bd-highlight my-3" type="date" id="date" name="date" max="2025-12-31">
+            <input class="p-2 bd-highlight my-3" type="date" id="date" name="date" max="2025-12-31" min=<?echo($mindate)?>>
                 <label class="p-2 bd-highlight" for="mandapam">Select Mandapam : </label>
                 <select class="p-2 bd-highlight" id="mandapam" name="mandapam"> 
                     <option value="Sree Vaikundom">Sree Vaikundom</option>
@@ -486,7 +486,12 @@ a:hover {
                 unset($_SESSION['available_time']);
             }
         }else{
-            echo "<a href="" class="badge badge-light">Please select date and mandapam</a>";
+            echo '<div class="alert alert-secondary alert-dismissible fade show mb-5" role="alert" style="width:500px;">
+                Please select date and mandapam
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>';
         } 
     ?>
     </div>

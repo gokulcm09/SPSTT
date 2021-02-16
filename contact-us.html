@@ -148,6 +148,29 @@
             font: 400 11px Roboto, Arial, sans-serif;
             text-decoration: none;
         }
+        #loading{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            width: 25px;
+            height: 25px;
+            border: 3px solid rgb(255, 196, 0);
+            border-radius: 50%;
+            border-top-color: rgb(255, 255, 255);
+            animation: spin 1s ease-in-out infinite;
+            -webkit-animation: spin 1s ease-in-out infinite;          
+        }
+        @keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
     </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -336,7 +359,6 @@
 
 
     <div class="site-wrapper-reveal">
-
         <div class="contact-page-wrapper section-space--pt_120">
             <div class="container">
                 <div class="row">
@@ -396,31 +418,60 @@
                         <div class="col-lg-6">
                             <div class="contact-form-wrap ml-lg-5">
                                 <h3 class="title mb-40">Contact Form</h3>
-                                <form id="contact-form" action="https://hasthemes.com/file/mail.php" method="post">
+                                <form id="contact-form" action="" role="form">
                                     <div class="contact-form__one">
                                         <div class="contact-input">
-                                            <label>Name</label>
+                                            <label for="name">Name</label>
                                             <div class="contact-inner">
-                                                <input name="con_name" type="text" placeholder="Enter you name">
+                                                <input name="name" type="text" placeholder="Enter you name" required="">
                                             </div>
                                         </div>
 
                                         <div class="contact-input">
-                                            <label>Phone</label>
+                                            <label for="phone-number">Phone</label>
                                             <div class="contact-inner">
-                                                <input name="con_phone" type="text" placeholder="Your Phone Number">
+                                                <input name="phone-number" type="text" placeholder="Your Phone Number" required="">
                                             </div>
                                         </div>
 
                                         <div class="contact-input">
-                                            <label>Email</label>
+                                            <label for="email">Email</label>
                                             <div class="contact-inner">
-                                                <input name="con_email" type="email" placeholder="Your Email Address ">
+                                                <input name="email" type="email" placeholder="Your Email Address" required="">
                                             </div>
                                         </div>
+
+                                        <div class="contact-input">
+                                            <label for="remarks"> Additional Remarks</label>
+                                            <div class="contact-inner">
+                                                <textarea name="remarks"
+                                                style= "  border-radius: 25px;
+                                                border: 1px solid #ddd;
+                                                padding: 10px 20px;
+                                                width: 100%;
+                                                font-style: italic;" type="text" placeholder="Type your message here...." rows="5"></textarea>
+                                            </div>
+                                        </div>
+
                                         <div class="submit-input">
-                                            <button class="submit-btn" type="submit">Submit</button>
-                                            <p class="form-messege"></p>
+                                            <button id="form-submit-btn" class="submit-btn" type="submit">Submit</button>
+                                        </div>
+
+                                        <div id="loading" style="display: none;"></div>
+
+
+                                        <div id="success-text" class="alert alert-success alert-dismissible fade show" role="alert mb-5 " style="width:500px; display: none;">
+                                            The form submission was successful! Officials will be in contact with you soon!
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <div id="error-text" class="alert alert-danger alert-dismissible fade show mb-5" role="alert" style="width:500px; display: none;">
+                                            An error occured! Please try submitting the form again. 
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </form>
@@ -430,8 +481,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
 
@@ -658,6 +707,33 @@
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        $("#contact-form").submit((e) => {
+          e.preventDefault();
+          $("#loading").css("display", "block");
+          $("#form-submit-btn").css("display", "none");
+          $.ajax({
+            url:
+              "https://script.google.com/macros/s/AKfycbzEt44ej-8MwtYWniXbCOZpot5zFW550vIvHtbZD2bH789Cl0zwPthP/exec",
+            data: $("#contact-form").serialize(),
+            method: "POST",
+            success: function (response) {
+              $("#loading").css("display", "none");
+              $("#form-submit-btn").css("display", "none");
+              $("#success-text").css("display", "block");
+              setTimeout(() => {
+                window.location.href = "/index.html";
+              }, 2000);
+            },
+            error: function (err) {
+              $("#loading").css("display", "none");
+              $("#form-submit-btn").css("display", "block");
+              $("#error-text").css("display", "block");
+            },
+          });
+        });
+      </script>
 
 </body>
 
